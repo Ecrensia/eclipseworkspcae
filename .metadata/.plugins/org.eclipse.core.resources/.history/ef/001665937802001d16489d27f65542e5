@@ -1,0 +1,17 @@
+package normal;
+
+public class Test4 {
+
+	public static void main(String[] args) {
+		
+		Loop1: for(int i = 2; i < 101; i++) {
+			for(int j = 2; j < i+1; j++) {
+				if(i != j && i % j == 0) continue Loop1;
+			}
+			System.out.println(i);
+		}
+
+	
+	}
+
+}

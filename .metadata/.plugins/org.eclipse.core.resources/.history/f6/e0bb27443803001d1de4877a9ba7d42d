@@ -1,0 +1,40 @@
+package variables;
+
+	/*
+	 * Writer : SOLA
+	 * Book : Do it! 자바 프로그래밍 입문
+	 * Chapter : 02-1
+	 */
+
+public class Binary_Scale {
+	public static void main(String[] args) {
+		
+		/*
+		 * Binary Scale
+		 * 
+		 * Computer can understand only 0 and 1
+		 * Human can understand binary scale, but we usually use decimal
+		 * So, we must convert decimal to binary scale for input number to computer
+		 * 
+		 * Step - convert decimal to binary scale
+		 * 1. Set decimal number that want to convert binary scale
+		 * 2. Division decimal number using natural number 2
+		 * 3. Change quotient to dividend
+		 * 4. Division dividend using natural number 2
+		 * 5. repeat step 3~4 when remainder 1 or 0
+		 * 6. Write continuously remainder
+		 * 7. Write subscript end of the binary number.
+		 */
+		
+		//Exercise
+		int decimal = 555;
+		
+		for(int i = 0; decimal != 0; i++) {
+			int remainder = decimal % 2;
+			System.out.print(remainder);
+			decimal /= 2;
+		}
+	
+
+	}
+}

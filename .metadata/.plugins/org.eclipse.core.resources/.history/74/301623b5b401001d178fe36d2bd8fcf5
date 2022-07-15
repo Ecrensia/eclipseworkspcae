@@ -1,0 +1,58 @@
+package bronze_1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class Num2108 {
+
+	public static void main(String[] args) throws IOException{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int number = Integer.parseInt(br.readLine());
+		int sum = 0;
+		int[] mode = new int[8001];
+		
+		for(int i = 0; i < number; i++) {
+			int inputCase = Integer.parseInt(br.readLine());
+			sum += inputCase;
+			
+			if(inputCase < 0) {
+				mode[Math.abs(inputCase)]++;
+			} else if(inputCase > 0){
+				mode[inputCase+4000]++;
+			} else mode[0]++;
+		}
+		
+		ArrayList<Integer> sortingList = new ArrayList<>();
+		
+		for(int i = 0; i < mode.length; i++) {
+			if(mode[i] == 0) continue;
+			else {
+				for(int j = 0; j < mode[i]; j++) {
+					if(i > 4000) sortingList.add(i-4000);
+					else if(i == 0) sortingList.add(0);
+					else sortingList.add(-i);
+				}
+			}
+		}
+		
+		System.out.println(sortingList.get(sortingList.size()-1)-sortingList.get(0));
+
+		
+		
+		
+		
+		int average = (int)(Math.round((double)sum / number));
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

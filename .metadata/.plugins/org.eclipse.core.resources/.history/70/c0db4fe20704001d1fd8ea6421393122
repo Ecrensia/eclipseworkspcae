@@ -1,0 +1,16 @@
+package tsetttt;
+
+public class Student {
+	
+	String name;
+	int age;
+	String phone;
+	int hight;
+	
+	public Student(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+
+}

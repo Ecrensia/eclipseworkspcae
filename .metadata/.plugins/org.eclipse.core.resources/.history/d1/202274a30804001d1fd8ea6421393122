@@ -1,0 +1,24 @@
+package tsetttt;
+
+public class Student {
+	
+	private String name;
+	private int age;
+	String phone;
+	int hight;
+	
+	public Student(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	public String getStudentName() {
+		return name;
+	}
+	
+	public void setStudentName(String name) {
+		this.name = name;
+	}
+	
+
+}

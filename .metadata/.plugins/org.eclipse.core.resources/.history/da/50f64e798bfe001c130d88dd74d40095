@@ -1,0 +1,58 @@
+package worker;
+
+import java.util.Scanner;
+
+public class Mian {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Company company = new Company();
+		
+		boolean run = true;
+		
+		while(run) {
+			System.out.println("주메뉴> 1.목록, 2.추가, 3.수정, 4.삭제, 0.종료");
+			int choice = sc.nextInt();
+			
+			switch(choice) {
+			case 0:
+				run = false;
+				System.out.println("프로그램이 종료됩니다.");
+				break;
+				
+			case 1:
+				System.out.println("Id \t Name \t JoinDate");
+				company.printWorkerList();
+				break;
+				
+			case 2:
+				System.out.println("사원에게 할당할 ID를 입력하세요.");
+				int id = sc.nextInt();
+				System.out.println("사원의 이름을 입력하세요.");
+				String name = sc.next();
+				System.out.println("사원의 입사일을 입력하세요.");
+				String joinDate = sc.next();
+				if(company.addWorker(id, name, joinDate)) System.out.println("새로운 사원이 추가되었습니다.");
+				else System.out.println("입력하신 ID는 이미 사용되고 있습니다. 다시 시도해 주십시오.");
+				break;
+				
+			case 3:
+				System.out.println("수정하고자 하는 사원의 ID를 입력하십시오.");
+				int id_find = sc.nextInt();
+				if(company.findOverlappingWorker(id_find) != null) {
+					company.updateWorker(id, name, joinDate);
+				}
+				
+				
+				
+			}
+			
+			
+			
+		}
+		
+
+	}
+
+}

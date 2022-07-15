@@ -1,0 +1,33 @@
+package chap_10;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Chap_10_4 {
+	
+	public static void main(String[] args) {
+		
+		List<Integer> arr1 = new ArrayList<>();
+		List<List<Integer>> arr2 = new ArrayList<>();
+		List<List<List<Integer>>> arr3 = new ArrayList<>();
+		List<List<List<List<Integer>>>> arr4 = new ArrayList<>();
+		List<List<List<List<List<Integer>>>>> arr5 = new ArrayList<>();
+		
+		arr1.add(1);
+		arr1.add(2);
+		arr1.add(3);
+		arr1.add(4);
+		
+		arr2.add(arr1);
+		arr3.add(arr2);
+		arr4.add(arr3);
+		arr5.add(arr4);
+		
+		System.out.println(arr5.get(0));
+		
+		
+				
+		
+	}
+
+}

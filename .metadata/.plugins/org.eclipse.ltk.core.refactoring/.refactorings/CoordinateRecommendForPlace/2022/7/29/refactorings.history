@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;clothes.Bottoms&apos; to &apos;Bottom&apos;&#x0D;&#x0A;- Original project: &apos;CoordinateRecommendForPlace&apos;&#x0D;&#x0A;- Original element: &apos;clothes.Bottoms&apos;&#x0D;&#x0A;- Renamed element: &apos;clothes.Bottom&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Bottoms&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;clothes{Bottoms.java[Bottoms" matchStrategy="1" name="Bottom" qualified="false" references="true" similarDeclarations="false" stamp="1657419824404" textual="false" version="1.0"/>
+</session>

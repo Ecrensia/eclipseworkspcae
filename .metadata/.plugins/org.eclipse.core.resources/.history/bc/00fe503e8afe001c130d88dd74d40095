@@ -1,0 +1,40 @@
+package worker;
+
+import java.util.ArrayList;
+
+public class Company {
+	
+	ArrayList<Worker> workers = new ArrayList<>();
+	
+	public void addWorker(int id, String name, String joinDate) {
+		if(findOverlappingWorker(id) == null) {
+			Worker worker = new Worker(id, name, joinDate);
+			workers.add(worker);
+		}
+	}
+	
+	public Integer findOverlappingWorker(int id) {
+
+		for(int i = 0; i < workers.size(); i++) {
+			if(id == workers.get(i).getId()) return i;
+		}
+		return null;
+	}
+	
+	public void deleteWorker(int id) {
+		if(findOverlappingWorker(id) != null) workers.remove((int)findOverlappingWorker(id));
+	}
+	
+	public void printWorkerList() {
+		for(Worker worker : workers) {
+			System.out.println(worker.getId() + worker.getName() + worker.getJoinDate());
+		}
+	}
+	
+	public void updateWorker(int id_find, int id_new, String name, String joinDate) {
+		Worker worker = workers.get(findOverlappingWorker(id_find));
+		worker.setId(id_new);
+		worker.setName(name);
+		worker.setJoinDate(joinDate);
+	}
+}

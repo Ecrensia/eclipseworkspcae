@@ -1,0 +1,48 @@
+package bronze_1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Num10845 {
+
+	public static void main(String[] args) throws IOException{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Queue<Integer> queue = new LinkedList<>();
+		
+		int orderNum = Integer.parseInt(br.readLine());
+		
+		while(orderNum > 0) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			String order = st.nextToken();
+			Integer number = Integer.parseInt(st.nextToken());
+			
+			switch(order) {
+			case "push":
+				queue.add(number);
+				break;
+			case "pop":
+				if(queue.poll() == null) System.out.println(-1);
+				break;
+			case "size":
+				queue.size();
+				break;
+			case "empty":
+				if(queue.isEmpty()) System.out.println(1);
+				else System.out.println(0);
+			case "front":
+				if(queue.peek() == null) System.out.println(-1);
+			case "back":
+				if(queue.isEmpty()) System.out.println(1);
+				else System.out.println(number);
+			}
+			orderNum--;
+		}
+
+	}
+
+}

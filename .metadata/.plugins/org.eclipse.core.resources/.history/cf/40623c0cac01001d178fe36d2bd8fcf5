@@ -1,0 +1,51 @@
+package bronze_1;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class Num11866 {
+
+	public static void main(String[] args) throws IOException{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		ArrayList<Integer> arr = new ArrayList<>();
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int listSize = Integer.parseInt(st.nextToken());
+		int deleteNum = Integer.parseInt(st.nextToken());
+		br.close();
+		
+		for(int i = 0; i < listSize; i++) {
+			arr.add(i+1);
+		}
+		
+		int deleteNumCount = deleteNum-1;
+		
+		bw.write("<");
+		
+		while(true) {
+			bw.write(arr.get(deleteNumCount));
+			arr.remove(deleteNumCount);
+			deleteNumCount += deleteNum;
+			
+			while(deleteNumCount >= arr.size()) {
+				if(arr.size() == 0) break;
+				deleteNumCount -= arr.size();
+			}
+			
+			if(arr.size() == 0) break;
+			
+			bw.write(", ");
+		}
+		
+		bw.write(">");
+		bw.flush();
+		bw.close();
+	}
+}

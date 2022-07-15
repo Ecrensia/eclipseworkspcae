@@ -1,0 +1,26 @@
+package chap_10;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Chap_10_4 {
+	
+	public static void main(String[] args) {
+		
+		List<Object> arr = new ArrayList<>();
+		List<Integer> arr2 = new ArrayList<>();
+		
+		arr2.add(1);
+		arr2.add(2);
+		arr2.add(3);
+		
+		
+		
+		arr.add(1);
+		arr.add(arr2);		
+		
+		for(Object N : arr) System.out.println(N);
+		
+	}
+
+}

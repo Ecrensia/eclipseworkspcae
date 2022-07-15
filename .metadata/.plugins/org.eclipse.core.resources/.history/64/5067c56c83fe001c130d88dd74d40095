@@ -1,0 +1,28 @@
+package worker;
+
+import java.util.ArrayList;
+
+public class Company {
+	
+	ArrayList<Worker> workers = new ArrayList<>();
+	
+	public boolean addWorker(int id, String name, String joinDate) {
+		
+		Worker worker = new Worker(id, name, joinDate);
+		workers.add(worker);
+		
+		return false;
+	}
+	
+	public boolean findOverlappingWorker(int id) {
+
+		for(int i = 0; i < workers.size(); i++) {
+			if(id == workers.get(i).getId()) {
+				
+			}
+		}
+		
+		return false;
+	}
+
+}

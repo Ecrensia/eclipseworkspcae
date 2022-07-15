@@ -1,0 +1,14 @@
+package tsetttt;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Student stu1 = new Student("석진혁", 29);
+		
+		System.out.println(stu1.getStudentName);
+		
+		
+
+	}
+}

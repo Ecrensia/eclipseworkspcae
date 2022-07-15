@@ -1,0 +1,13 @@
+package tsetttt;
+
+public class Student {
+	
+	String name;
+	int age;
+	String phone;
+	int hight;
+	
+	
+	
+
+}
